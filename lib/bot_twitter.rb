@@ -39,7 +39,7 @@ def like_tweet(client)
 end
 
 def follow_tweet(client)
-  tweets = client.search("#bonjour_monde", result_type:"all").take(20).first.user.id
+  tweets = client.search("#bonjour_monde", result_type:"recent").take(20).first.user.id
   client.follow(tweets)
 end
 
